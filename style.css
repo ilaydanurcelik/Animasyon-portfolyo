@@ -1,0 +1,209 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #a7bcb3;
+  padding: 1rem 2;
+  text-align: center;
+  animation: slide-down 1s ease-out;
+}
+a {
+  text-decoration: none;
+  color: #341599;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #3c3b3e;
+}
+
+header h1 {
+  margin: 0;
+  color: black;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(243, 66, 12), rgb(10, 28, 128));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  flex: 1;
+}
+
+#about img {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+}
+
+.project {
+  border: 1px solid #ecd019;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  animation: fade-in 2s ease-in-out;
+}
+.project a {
+  text-decoration: none;
+}
+
+#contact a {
+  color: #333;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+#about a {
+  text-decoration: none;
+  color: rgb(55, 26, 136);
+}
+
+footer {
+  background-color: #a7bcb3;
+  color: #000000;
+  text-align: center;
+  padding: 1rem 0;
+}
+.slide-in h3 {
+  color: rgb(166, 166, 194);
+}
+#contact {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgb(169, 169, 193);
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px; /*Başlığın altına 20 piksel boşluk ekler.*/
+}
+
+/* .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+} */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #726d6d;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #c8b6b6;
+  transition: border-color 0.3s ease; /*Kenar rengini yavaşça değiştiren bir geçiş efekti ekler.*/
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #637180;
+  color: white;
+  padding: 8px 15px;
+  border: none; /*buton kenar çizgi kaldırır*/
+  border-radius: 8px;
+  cursor: pointer; /*Fare butonun üzerine geldiğinde imleci "el" şeklinde değiştirir*/
+  font-size: 14px;
+  transition: background-color 0.3s ease; /*Arka plan renginin yavaşça değişmesini sağlayan bir geçiş efekti ekler.*/
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 2s ease-in-out;
+}
+
+.slide-in {
+  animation: slide-in 1s ease-out;
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
